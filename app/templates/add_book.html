@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj książkę</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Dodaj książkę</h1>
+        <form action="{{ url_for('main.add_book') }}" method="POST">
+            <div class="form-element">
+                <label for="title">Tytuł książki:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-element">
+                <label for="authors">Autorzy (oddzieleni przecinkami):</label>
+                <input type="text" id="authors" name="authors">
+            </div>
+            <button type="submit">Dodaj książkę</button>
+        </form>
+    </div>
+</body>
+</html>
